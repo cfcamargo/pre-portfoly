@@ -42,10 +42,10 @@ const changeTheme = (theme: string) => {
                     <NuxtLink to="/">
                         HOME
                     </NuxtLink>
-                    <NuxtLink>
+                    <NuxtLink to="/contact">
                         CONTATO
                     </NuxtLink>
-                    <NuxtLink>
+                    <NuxtLink to="projects">
                         PROJETOS
                     </NuxtLink>
                 </nav>
