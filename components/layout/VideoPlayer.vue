@@ -1,75 +1,41 @@
 <template>
-    <div class="relative w-full h-0">
-      <img
-        v-if="!isPlaying"
-        :src="cover"
-        @click="playVideo"
-        class="cursor-pointer w-full h-auto"
-        alt="Video cover"
-      />
-      <div v-if="isPlaying" ref="player" class="absolute top-0 left-0 w-full h-full"></div>
+    <div class="w-full aspect-video">
+        <video ref="videoPlayer" class="w-full aspect-video h-full video-js vjs-default-skin vjs-big-play-centered"></video>
     </div>
-  </template>
+</template>
   
-  <script lang="ts" setup>
-  import { ref, onMounted } from 'vue';
+<script lang="ts" setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+import videojs from 'video.js';
+import 'video.js/dist/video-js.css';
+import 'videojs-youtube';
+
+const player = ref<any>(null);
+const videoPlayer = ref<HTMLDivElement | null>(null);
   
-  interface Props {
-    videoId: string;
-    cover: string;
-  }
+onMounted(() => {
+if (videoPlayer.value) {
+    player.value = videojs(videoPlayer.value, {
+    techOrder: ['youtube'],
+    sources: [{
+        src: 'https://www.youtube.com/watch?v=p9gZsFAiSAc&t=2021s',
+        type: 'video/youtube'
+    }],
+        poster: '/video-cover.png',
+        controls: true,
+        autoplay: false,
+        preload: 'auto'
+    });
+}
+});
   
-  declare global {
-    interface Window {
-      YT: any;
-      onYouTubeIframeAPIReady: () => void;
-    }
-  }
-  
-  const props = defineProps<Props>();
-  const isPlaying = ref(false);
-  const player = ref<HTMLDivElement | null>(null);
-  
-  const playVideo = () => {
-    isPlaying.value = true;
-  };
-  
-  onMounted(() => {
-    if (window.YT) {
-      createPlayer();
-    } else {
-      window.onYouTubeIframeAPIReady = createPlayer;
-    }
-  });
-  
-  const createPlayer = () => {
-    if (player.value) {
-      new window.YT.Player(player.value, {
-        videoId: props.videoId,
-        events: {
-          onReady: (event: any) => {
-            event.target.playVideo();
-          }
-        },
-        playerVars: {
-          autoplay: 1,
-          controls: 1,
-          modestbranding: 1,
-          rel: 0
-        }
-      });
-    }
-  };
-  </script>
-  
-  <style scoped>
-  .video-container {
-    @apply relative w-full h-0; /* 16:9 Aspect Ratio */
-  }
-  
-  .video-container img,
-  .video-container div {
-    @apply absolute top-0 left-0 w-full h-full;
-  }
-  </style>
+onBeforeUnmount(() => {
+if (player.value) {
+    player.value.dispose();
+}
+});
+</script>
+
+<style scoped>
+</style>
   
