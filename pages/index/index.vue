@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import lottie from 'lottie-web'
+import { Youtube } from 'lucide-vue-next';
+
 import {
   Card,
   CardContent,
@@ -54,7 +56,10 @@ onMounted(() => {
         <Card>
             <CardContent class="p-8 grid grid-cols-2 gap-6 items-center">
                 <div class="flex flex-col gap-4">
-                    <h4 class="font-bold">Me Acompanhe no YouTube</h4>
+                    <div class="flex items-center gap-2">
+                        <Youtube />
+                        <h4 class="font-bold">Me Acompanhe no YouTube</h4>
+                    </div>
                     <p>
                         Este portfólio é temporário, pois estou trabalhando em uma versão nova e ainda mais completa, que estará disponível em breve. Todo o processo de criação do novo portfólio está sendo documentado e compartilhado no meu canal do YouTube. Acompanhe para ver de perto como tudo está sendo desenvolvido!
                     </p>    
