@@ -27,7 +27,7 @@ import {
                     <CardHeader>
                         <CardTitle>
                             <CardTitle>
-                                <NuxtImg src="/covers/rmagro.png"/>
+                                <NuxtImg src="/covers/modular.png"/>
                             </CardTitle>
                             <CardDescription class="font-bold mt-4 text-xl">
                                     MODULAR PRE MOLDADOS
