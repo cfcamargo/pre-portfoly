@@ -30,6 +30,35 @@ import {
                                 <NuxtImg src="/covers/rmagro.png"/>
                             </CardTitle>
                             <CardDescription class="font-bold mt-4 text-xl">
+                                    MODULAR PRE MOLDADOS
+                            </CardDescription>
+                        </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <p class="text-zinc-700">
+                            Este é um projeto full stack desenvolvido para a Modular Pré Moldados, com o objetivo de substituir o controle de pedidos feito em planilhas por um sistema mais robusto e eficiente. Utilizando Nuxt.js, Vue.js, ChadCN e Tailwind CSS no front-end, e Adonis JS no back-end, o sistema foi projetado para atender às necessidades específicas da empresa, oferecendo um controle abrangente de pedidos, estoque, clientes, e mais.
+                        </p>
+                    </CardContent>
+                    <CardFooter class="flex flex-col gap-2">
+                        <a class="w-full" href="gh repo clone cfcamargo/modular-web" target="_blank">
+                            <Button class="w-full">
+                                Repositório Web
+                            </Button>
+                        </a>
+                        <a class="w-full" href="https://github.com/cfcamargo/modular-api" target="_blank">
+                            <Button class="w-full">
+                                Repositório API
+                            </Button>
+                        </a>
+                    </CardFooter>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle>
+                            <CardTitle>
+                                <NuxtImg src="/covers/rmagro.png"/>
+                            </CardTitle>
+                            <CardDescription class="font-bold mt-4 text-xl">
                                 RM AGRO
                             </CardDescription>
                         </CardTitle>
