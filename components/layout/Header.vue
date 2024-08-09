@@ -8,12 +8,12 @@ import {
     TooltipTrigger
 } from '@/components/ui/tooltip'
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 
 
@@ -22,11 +22,10 @@ const colorMode = useColorMode()
 const changeTheme = (theme: string) => {
     colorMode.preference = theme
 }
-
 </script>
 
 <template> 
-    <header class="w-full h-24 bg-black">
+    <header class="w-full h-24 bg-zinc-900">
        <Container class="flex items-center justify-between h-full">
             <div class="flex items-center gap-2">
                 <div class="w-12">
@@ -42,7 +41,7 @@ const changeTheme = (theme: string) => {
                     <NuxtLink to="/">
                         HOME
                     </NuxtLink>
-                    <NuxtLink to="/contact">
+                    <NuxtLink to="/contacts">
                         CONTATO
                     </NuxtLink>
                     <NuxtLink to="projects">
