@@ -1,8 +1,5 @@
 <script lang="ts" setup>
-useHead({
-    title: 'Cristian Camargo | Meus Links',
-})
-import { Github, Linkedin, Youtube, Instagram, Mail, FileText } from 'lucide-vue-next'
+import { Github, Linkedin, Youtube, Instagram, Mail, FileText, ChevronsLeftRight } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
 import {
     Card,
@@ -12,7 +9,9 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card'
-
+useHead({
+    title: 'Cristian Camargo | Meus Links',
+})
 
 </script>
 
@@ -58,14 +57,12 @@ import {
                         <span class="flex-1">Youtube</span>
                     </Button>
                 </a>
-
                 <a target="_blank" href="https://www.instagram.com/sr.fcamargo/">
                     <Button class="w-full flex gap-2">
                         <Instagram />
                         <span class="flex-1">Instagram</span>
                     </Button>
                 </a>
-
                 <a target="_blank" href="mailto:contato@camargodev.com.br">
                     <Button class="w-full flex gap-2">
                         <Mail />
@@ -76,6 +73,12 @@ import {
                     <Button class="w-full flex gap-2">
                         <FileText />
                         <span class="flex-1">Meu CV</span>
+                    </Button>
+                </a>
+                <a target="_blank" href="https://portfolio-old-git-main-cristian-camargos-projects-0c6898b4.vercel.app/">
+                    <Button class="w-full flex gap-2">
+                        <ChevronsLeftRight />
+                        <span class="flex-1">Site Antigo</span>
                     </Button>
                 </a>
             </CardContent>
