@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+useHead({
+    title: 'Cristian Camargo | Meus Links',
+})
 import { Github, Linkedin, Youtube, Instagram, Mail, FileText } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
 import {

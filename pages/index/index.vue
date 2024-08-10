@@ -4,15 +4,11 @@ import { Youtube } from 'lucide-vue-next';
 import { Button } from '@/components/ui/button'
 
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+    Card,
+    CardContent,
 } from '@/components/ui/card'
 
-const animationContainer = ref(null)
+const animationContainer = ref()
 
 onMounted(() => {
   lottie.loadAnimation({
@@ -29,22 +25,23 @@ onMounted(() => {
 <template>
     <section id="home" class="py-8 flex flex-col gap-4">
         <Card>
-            <CardContent class="p-8 grid grid-cols-2 gap-6 items-center">
+            <CardContent class="p-8 grid xs:grid-cols-1 md:grid-cols-2 gap-6 items-center">
                 <div class="flex flex-col gap-4">
                     <h2 class="font-bold text-2xl mb-4">
                         Olá! Bem Vindo
                     </h2>
                     <p>
-                        Sou desenvolvedor Full Stack com ampla experiência em Vue e Node.js.
+                        Eu sou o Cristian Camargo
                     </p>
 
                     <p>
-                        Com mais de dois anos de experiência no mercado de desenvolvimento web, tenho contribuído para diversos projetos, focando sempre em criar soluções robustas e intuitivas. Minha expertise abrange desde o front-end até o back-end, utilizando as melhores práticas e tecnologias de ponta.
+                        Desenvolvedor de Software com stack principal no ecossistema Vue, incluindo Vue.js, Nuxt, Tailwind CSS, e AdonisJS no back-end. Vamos criar algo juntos?
                     </p>
 
-                    <p>
-                        Sinta-se à vontade para explorar o conteúdo atual e conhecer mais sobre meu trabalho. Estou à disposição para ajudar a transformar suas ideias em realidade.
-                    </p>
+                    <div class="pt-4">
+                        <h4 class="font-bold">Tecnologias</h4>
+                        <Tecnologies />
+                    </div>
                 </div>
 
                 <div>
@@ -53,7 +50,7 @@ onMounted(() => {
             </CardContent>
         </Card>
         <Card>
-            <CardContent class="p-8 grid grid-cols-2 gap-6 items-center">
+            <CardContent class="p-8 grid xs:grid-cols-1 md:grid-cols-2 gap-6 items-center">
                 <div class="flex flex-col gap-4">
                     <div class="flex items-center gap-2">
                         <Youtube />
@@ -71,7 +68,9 @@ onMounted(() => {
                         Acompanhe para ver de perto como tudo está sendo desenvolvido!
                     </p>
                     <a href="https://www.youtube.com/@camargodev" target="_blank">
-                        <Button>Acessar Canal</Button>
+                        <Button class="xs:w-full md:w-auto">
+                            Acessar Canal
+                        </Button>
                     </a>
                 </div>
 
