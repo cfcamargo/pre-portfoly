@@ -132,13 +132,13 @@ const defineAnimationToHamburgueMenu = computed(() => {
                     class="w-full flex h-[calc(100vh_-_96px)] flex-col fixed bottom-0 left-0 right-0 bg-white z-50 text-black" 
                 >
                     <nav class="flex-1 flex flex-col justify-center items-center gap-8">
-                        <NuxtLink class="font-bold text-lg" to="/">
+                        <NuxtLink class="font-bold text-lg" @click="toogleMenu" to="/">
                             HOME
                         </NuxtLink>
-                        <NuxtLink class="font-bold text-lg" to="/contacts">
+                        <NuxtLink class="font-bold text-lg" @click="toogleMenu" to="/contacts">
                             CONTATO
                         </NuxtLink>
-                        <NuxtLink class="font-bold text-lg" to="projects">
+                        <NuxtLink class="font-bold text-lg" @click="toogleMenu" to="projects">
                             PROJETOS
                         </NuxtLink>
                     </nav>
