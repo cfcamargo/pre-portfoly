@@ -2,7 +2,7 @@ export function useTecnologiesIcons(){
     const tecnologies = ref([
         {
             name: 'VueJS',
-            icon: 'https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/vuejs/vuejs-original.svg'
+            icon: 'https://www.svgrepo.com/show/354528/vue.svg'
         },
         {
             name: 'NuxtJs',
@@ -10,7 +10,7 @@ export function useTecnologiesIcons(){
         }, 
         {
             name: 'Tailwind CSS',
-            icon: 'https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/tailwindcss/tailwindcss-original.svg'
+            icon: 'https://www.svgrepo.com/show/374118/tailwind.svg'
         },
         {
             name: 'Typescript',
@@ -34,7 +34,7 @@ export function useTecnologiesIcons(){
         },
         {
             name: 'C#',
-            icon : 'https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/csharp/csharp-original.svg'
+            icon : 'https://static-00.iconduck.com/assets.00/c-sharp-c-icon-1822x2048-wuf3ijab.png'
         },
         { 
             name: '.Net',
@@ -42,27 +42,27 @@ export function useTecnologiesIcons(){
         },
         {
             name: 'Ionic',
-            icon: 'https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/ionic/ionic-original.svg'
+            icon: 'https://cdn.iconscout.com/icon/free/png-256/free-ionic-3628853-3029993.png'
         },
         { 
             name: 'Postgress',
-            icon: 'https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/postgresql/postgresql-original.svg'
+            icon: 'https://www.svgrepo.com/show/354200/postgresql.svg'
         },
         { 
             name: 'Docker',
-            icon: 'https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/docker/docker-original.svg'
+            icon: 'https://www.svgrepo.com/show/448221/docker.svg'
         },
         {
             name: 'Cypress',
-            icon: 'https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/cypressio/cypressio-original.svg'
+            icon: 'https://www.svgrepo.com/show/353630/cypress.svg'
         },
         {
             name: 'Vuetify',
-            icon: 'https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/vuetify/vuetify-original.svg'
+            icon: 'https://static-00.iconduck.com/assets.00/vuetify-icon-1793x2048-xtqk92sz.png'
         },
         { 
             name: 'Quasar',
-            icon: 'https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/quasar/quasar-original.svg'
+            icon: 'https://www.svgrepo.com/show/374024/quasar.svg'
         },
         {
             name: 'Pinia',
@@ -70,11 +70,11 @@ export function useTecnologiesIcons(){
         },
         {
             name: 'ChadCN',
-            icon: 'https://raw.githubusercontent.com/radix-vue/shadcn-vue/dev/apps/www/src/public/android-chrome-192x192.png'
+            icon: 'data:image/jpeg;base64,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'
         },
         { 
             name: 'Figma',
-            icon :'https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/figma/figma-original.svg'
+            icon :'https://www.svgrepo.com/show/354987/figma.svg'
         }
     ])
 

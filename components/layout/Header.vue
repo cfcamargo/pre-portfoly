@@ -54,14 +54,14 @@ const defineAnimationToHamburgueMenu = computed(() => {
                     <NuxtLink to="/">
                         HOME
                     </NuxtLink>
-                    <NuxtLink to="/contacts">
-                        CONTATO
+                    <NuxtLink to="/about">
+                        SOBRE
                     </NuxtLink>
                     <NuxtLink to="/projects">
                         PROJETOS
                     </NuxtLink>
-                    <NuxtLink to="/about">
-                        SOBRE
+                    <NuxtLink to="/contacts">
+                        CONTATO
                     </NuxtLink>
                 </nav>
 
@@ -138,14 +138,14 @@ const defineAnimationToHamburgueMenu = computed(() => {
                         <NuxtLink class="font-bold text-lg" @click="toogleMenu" to="/">
                             HOME
                         </NuxtLink>
-                        <NuxtLink class="font-bold text-lg" @click="toogleMenu" to="/contacts">
-                            CONTATO
+                        <NuxtLink class="font-bold text-lg" @click="toogleMenu" to="/about">
+                            SOBRE
                         </NuxtLink>
                         <NuxtLink class="font-bold text-lg" @click="toogleMenu" to="/projects">
                             PROJETOS
                         </NuxtLink>
-                        <NuxtLink class="font-bold text-lg" @click="toogleMenu" to="/about">
-                            SOBRE
+                        <NuxtLink class="font-bold text-lg" @click="toogleMenu" to="/contacts">
+                            CONTATO
                         </NuxtLink>
                     </nav>
 
