@@ -1,5 +1,3 @@
-import { ref } from 'vue'
-
 export function useGetChanelLastVideo() {
     const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY ; // Substitua pela sua chave de API
     const CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANEL_ID; // Substitua pelo ID do seu canal
