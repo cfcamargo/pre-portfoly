@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { Github, Linkedin, Youtube, Instagram, Mail, FileText, ChevronsLeftRight } from 'lucide-vue-next'
+import { Github, Linkedin, Youtube, Instagram, Mail, FileText, ChevronsLeftRight, LoaderCircle } from 'lucide-vue-next'
+import { useGetChanelLastVideo } from '~/composables/useGetChanelLastVideo';
 import { Button } from '@/components/ui/button'
 import {
     Card,
@@ -9,10 +10,21 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card'
+
+const { fetchLatestVideo } = useGetChanelLastVideo()
+
+const loading = ref(true)
+const videoId = ref('')
+
+const getLastVideo = async() => {
+    videoId.value = await fetchLatestVideo()
+    loading.value = false
+}
+
 useHead({
     title: 'Cristian Camargo | Meus Links',
 })
-
+onMounted(() => getLastVideo())
 </script>
 
 <template>
@@ -33,7 +45,10 @@ useHead({
                     Veja meu ultimo video
                 </p>
                 <div>
-                    <VideoPlayer />
+                    <div v-if="loading" class="w-full flex items-center justify-center aspect-video">
+                        <LoaderCircle class="animate-spin" :size="30"/>
+                    </div>
+                    <VideoPlayer v-else :video-id="videoId"/>
                 </div>
 
                 <h2 class="font-bold mt-4 text-center">

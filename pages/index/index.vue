@@ -75,7 +75,7 @@ onMounted(() => {
                 </div>
 
                 <div class="w-full">
-                    <VideoPlayer />
+                    <VideoPlayer video-id="p9gZsFAiSAc&t=2021s"/>
                 </div>
             </CardContent>
         </Card>

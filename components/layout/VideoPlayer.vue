@@ -10,32 +10,30 @@ import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
 import 'videojs-youtube';
 
+const props = defineProps<{
+    videoId: string
+}>()
+
 const player = ref<any>(null);
 const videoPlayer = ref<HTMLDivElement | null>(null);
-  
+
 onMounted(() => {
 if (videoPlayer.value) {
     player.value = videojs(videoPlayer.value, {
     techOrder: ['youtube'],
     sources: [{
-        src: 'https://www.youtube.com/watch?v=p9gZsFAiSAc&t=2021s',
+        src: `https://www.youtube.com/watch?v=${props.videoId}`,
         type: 'video/youtube'
     }],
-        poster: '/video-cover.png',
         controls: true,
         autoplay: false,
         preload: 'auto'
     });
 }
 });
-  
 onBeforeUnmount(() => {
-if (player.value) {
-    player.value.dispose();
-}
+    if (player.value) {
+        player.value.dispose();
+    }
 });
-</script>
-
-<style scoped>
-</style>
-  
+</script>  
