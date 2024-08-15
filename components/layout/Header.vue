@@ -40,14 +40,14 @@ const defineAnimationToHamburgueMenu = computed(() => {
 <template> 
     <header class="w-full h-24 bg-zinc-900">
         <Container class="flex items-center justify-between h-full">
-            <div class="flex items-center gap-2 xs:pl-4">
+            <NuxtLink to="/" class="flex items-center gap-2 xs:pl-4">
                 <div class="w-12">
                     <NuxtImg class="w-full" src="/logo-dark.png"/>
                 </div>
                 <h2 class="xs:text-lg md:text-2xl font-bold text-white">
                     Cristian Camargo
                 </h2>
-            </div>
+            </NuxtLink>
 
             <div class="xs:hidden md:flex items-center gap-8">
                 <nav class="flex items-center font-bold gap-4 text-white">
