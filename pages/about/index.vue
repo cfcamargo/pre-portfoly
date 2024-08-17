@@ -23,7 +23,7 @@ const { tecnologies } = useTecnologiesIcons()
             <CardContent>
                 <div class="grid xs:grid-cols-1 md:grid-cols-2 gap-4 py-4">
                     <div>
-                        <NuxtImg src="/about.png" class="w-full h-full object-cover" />
+                        <NuxtImg src="/about.png" loading="lazy" :quality="50" class="w-full h-full object-cover" />
                     </div>
 
                     <div class="flex flex-col gap-2">
