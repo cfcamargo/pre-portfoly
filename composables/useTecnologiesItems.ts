@@ -34,7 +34,7 @@ export function useTecnologiesIcons(){
         },
         {
             name: 'C#',
-            icon : 'https://static-00.iconduck.com/assets.00/c-sharp-c-icon-1822x2048-wuf3ijab.png'
+            icon : 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg'
         },
         { 
             name: '.Net',
@@ -58,7 +58,7 @@ export function useTecnologiesIcons(){
         },
         {
             name: 'Vuetify',
-            icon: 'https://static-00.iconduck.com/assets.00/vuetify-icon-1793x2048-xtqk92sz.png'
+            icon: 'https://cdn.vuetifyjs.com/docs/images/brand-kit/v-logo.svg'
         },
         { 
             name: 'Quasar',
