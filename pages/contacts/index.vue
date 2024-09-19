@@ -65,7 +65,7 @@ onMounted(() => getLastVideo())
                         <span class="flex-1">Linkedin</span>
                     </Button>
                 </a>
-                <a target="_blank" href="https://www.linkedin.com/in/cristian-camargo-4504291b4/">
+                <a target="_blank" href="https://www.youtube.com/@camargodev">
                     <Button class="w-full flex gap-2">
                         <Youtube />
                         <span class="flex-1">Youtube</span>
