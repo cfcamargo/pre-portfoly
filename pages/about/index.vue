@@ -90,7 +90,7 @@ const { tecnologies } = useTecnologiesIcons()
                             <div class="flex items-center gap-4 text-xs text-gray-700 dark:text-gray-200">
                                 <span>Agosto de 2022</span>
                                 <div class="w-1 h-1 rounded-full bg-zinc-900 dark:bg-white"/>
-                                <span>Atualmente</span>
+                                <span>Setembro de 2024</span>
                             </div>
                         </CardFooter>
                     </Card>
