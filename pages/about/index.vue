@@ -78,6 +78,31 @@ const { tecnologies } = useTecnologiesIcons()
                                 Desenvolvedor Front End
                             </CardTitle>
                             <CardDescription>
+                                <a href="https://www.kognit.com.br/" target="_blank">Kognit</a>
+                            </CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                            <p>
+                                Sou desenvolvedor front-end, atuando no desenvolvimento de aplicações web com React e Styled Components, e mobile com React Native. No dia a dia, implemento novas features, corrijo bugs e aprimoro a experiência do usuário, sempre em colaboração com os times de design e back-end. Meu foco está em entregar soluções performáticas, escaláveis e bem estruturadas, garantindo um código limpo, reutilizável e alinhado com as melhores práticas do mercado.
+                            </p>
+                        </CardContent>
+                        <CardFooter>
+                            <div class="flex items-center gap-4 text-xs text-gray-700 dark:text-gray-200">
+                                <span>Janeiro de 2025</span>
+                                <div class="w-1 h-1 rounded-full bg-zinc-900 dark:bg-white"/>
+                                <span>Atualmente</span>
+                            </div>
+                        </CardFooter>
+                    </Card>
+                </div>
+                <div class="flex xs:items-start md:items-center gap-8">
+                    <div class="w-2 h-2 xs:mt-10 md:mt-0 rounded-full bg-zinc-900 dark:bg-white"/>
+                    <Card class="w-full">
+                        <CardHeader>
+                            <CardTitle>
+                                Desenvolvedor Front End
+                            </CardTitle>
+                            <CardDescription>
                                 <a href="https://cygniagroscience.com/home" target="_blank">Cygni Agroscience</a>
                             </CardDescription>
                         </CardHeader>
