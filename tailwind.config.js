@@ -92,6 +92,15 @@ module.exports = {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0' },
         },
+        "float": {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-18px)' },
+        },
+        "orb-float": {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '33%': { transform: 'translate(30px, -20px) scale(1.05)' },
+          '66%': { transform: 'translate(-20px, 15px) scale(0.97)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -102,6 +111,8 @@ module.exports = {
         "fade-in-up": "fade-in-up 0.65s ease-out forwards",
         "fade-in": "fade-in 0.5s ease-out forwards",
         "blink-cursor": "blink-cursor 1s step-end infinite",
+        "float": "float 5s ease-in-out infinite",
+        "orb-float": "orb-float 14s ease-in-out infinite",
       },
     },
   },

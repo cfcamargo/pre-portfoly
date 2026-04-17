@@ -1,23 +1,13 @@
 <script lang="ts" setup>
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from '@/components/ui/card'
-
-useHead({
-    title: 'Cristian Camargo | Sobre Mim',
-})
+useHead({ title: 'Cristian Camargo | Sobre Mim' })
 
 const skillCategories = [
     {
         label: 'Frontend',
-        bgClass: 'bg-blue-500/10',
-        textClass: 'text-blue-600 dark:text-blue-400',
-        borderClass: 'border-blue-200 dark:border-blue-800',
+        icon: '🖥',
+        borderClass: 'dark:border-blue-500/20 border-blue-200',
+        bgClass: 'dark:bg-blue-500/5 bg-blue-50/50',
+        textClass: 'text-blue-500 dark:text-blue-400',
         dotClass: 'bg-blue-500',
         skills: [
             { name: 'React JS', icon: 'https://www.svgrepo.com/show/452092/react.svg' },
@@ -30,12 +20,13 @@ const skillCategories = [
     },
     {
         label: 'Backend',
-        bgClass: 'bg-emerald-500/10',
+        icon: '⚙️',
+        borderClass: 'dark:border-emerald-500/20 border-emerald-200',
+        bgClass: 'dark:bg-emerald-500/5 bg-emerald-50/50',
         textClass: 'text-emerald-600 dark:text-emerald-400',
-        borderClass: 'border-emerald-200 dark:border-emerald-800',
         dotClass: 'bg-emerald-500',
         skills: [
-            { name: '.NET / C#', icon: 'https://www.svgrepo.com/show/373575/csharp.svg' },
+            { name: '.NET / C#', icon: 'https://www.svgrepo.com/show/376369/dotnet.svg' },
             { name: 'Node.js', icon: 'https://www.svgrepo.com/show/452075/node-js.svg' },
             { name: 'AdonisJS', icon: 'https://cdn.worldvectorlogo.com/logos/adonisjs.svg' },
             { name: 'PostgreSQL', icon: 'https://www.svgrepo.com/show/354200/postgresql.svg' },
@@ -44,21 +35,25 @@ const skillCategories = [
     },
     {
         label: 'Mobile',
-        bgClass: 'bg-violet-500/10',
+        icon: '📱',
+        borderClass: 'dark:border-violet-500/20 border-violet-200',
+        bgClass: 'dark:bg-violet-500/5 bg-violet-50/50',
         textClass: 'text-violet-600 dark:text-violet-400',
-        borderClass: 'border-violet-200 dark:border-violet-800',
         dotClass: 'bg-violet-500',
         skills: [
             { name: 'React Native', icon: 'https://www.svgrepo.com/show/452092/react.svg' },
-            { name: 'Android', icon: 'https://www.svgrepo.com/show/452156/android.svg' },
-            { name: 'Kotlin', icon: 'https://www.svgrepo.com/show/374001/kotlin.svg' },
+            { name: 'Android', icon: 'https://www.svgrepo.com/show/349588/android.svg' },
+            { name: 'Kotlin', icon: 'https://www.svgrepo.com/show/373728/kotlin.svg' },
         ],
     },
+
+    
     {
         label: 'Ferramentas',
-        bgClass: 'bg-amber-500/10',
+        icon: '🛠',
+        borderClass: 'dark:border-amber-500/20 border-amber-200',
+        bgClass: 'dark:bg-amber-500/5 bg-amber-50/50',
         textClass: 'text-amber-600 dark:text-amber-400',
-        borderClass: 'border-amber-200 dark:border-amber-800',
         dotClass: 'bg-amber-500',
         skills: [
             { name: 'Figma', icon: 'https://www.svgrepo.com/show/354987/figma.svg' },
@@ -66,221 +61,213 @@ const skillCategories = [
             { name: 'Cypress', icon: 'https://www.svgrepo.com/show/353630/cypress.svg' },
         ],
     },
+    {
+        label: 'IA & Produtividade',
+        icon: '🤖',
+        borderClass: 'dark:border-fuchsia-500/20 border-fuchsia-200',
+        bgClass: 'dark:bg-fuchsia-500/5 bg-fuchsia-50/50',
+        textClass: 'text-fuchsia-600 dark:text-fuchsia-400',
+        dotClass: 'bg-fuchsia-500',
+        skills: [
+            { name: 'Claude Code', icon: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/claude.svg' },
+            { name: 'Gemini', icon: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/gemini.svg' },
+            { name: 'ChatGPT', icon: 'https://www.svgrepo.com/show/306500/openai.svg' },
+        ],
+    },
+]
+
+const experiences = [
+    {
+        role: 'Desenvolvedor Front End',
+        company: 'Kognit',
+        href: 'https://www.kognit.com.br/',
+        period: 'Jan 2025 – Atual',
+        current: true,
+        description: 'Trabalho no desenvolvimento web com React e no mobile com React Native, sempre em contato direto com o time de design e back-end. Cuido de novas funcionalidades, correções e melhoras de performance — com foco em código que escala e entrega uma boa experiência pro usuário final.',
+        tags: ['React', 'React Native', 'TypeScript', 'Styled Components'],
+    },
+    {
+        role: 'Desenvolvedor Front End',
+        company: 'Cygni Agroscience',
+        href: 'https://cygniagroscience.com/home',
+        period: 'Ago 2022 – Set 2024',
+        current: false,
+        description: 'Fiz parte do time que desenvolve o CygniAG, uma plataforma que usa imagens de satélite para ajudar produtores rurais a tomarem decisões melhores no campo. Trabalhei com Vue.js, Tailwind CSS e integração da API do Google Maps — aprendendo muito sobre UX de mapas e sistemas de alta complexidade.',
+        tags: ['Vue.js', 'Nuxt.js', 'Tailwind CSS', 'Google Maps API'],
+    },
+    {
+        role: 'Desenvolvedor Web',
+        company: 'Freelancer',
+        href: null,
+        period: 'Jun 2021 – Atual',
+        current: false,
+        description: 'Trabalhei para diversas empresas locais desenvolvendo sites, sistemas de gestão e landing pages do zero. Foi o período em que mais aprendi — cada projeto trazia um problema diferente e uma tecnologia nova pra dominar.',
+        tags: ['Vue.js', 'Nuxt.js', 'Tailwind CSS', 'Node.js'],
+    },
+    {
+        role: 'Coordenador de Tecnologia e Inovação',
+        company: 'Geofarm Agricultura de Precisão',
+        href: 'https://geofarmagro.com.br/',
+        period: 'Ago 2018 – Jul 2022',
+        current: false,
+        description: 'Coordenei a área de tecnologia numa empresa de agricultura de precisão, cuidando de equipamentos como piloto automático, GPS agrícola e sistemas de taxa variável. Foi aí que nasceu meu interesse pela interseção entre tecnologia e agronegócio — algo que carrego até hoje.',
+        tags: ['Gestão', 'Agro Tech', 'Liderança'],
+    },
 ]
 </script>
 
 <template>
-    <section id="about" class="py-8 flex flex-col gap-6 mt-4">
+    <div class="py-12 flex flex-col gap-20">
 
-        <!-- Sobre Mim -->
+        <!-- ─── SOBRE MIM ─── -->
         <RevealItem>
-            <Card>
-                <CardContent>
-                    <div class="grid xs:grid-cols-1 md:grid-cols-2 gap-8 py-6">
-                        <div class="flex items-start justify-center">
-                            <NuxtImg
-                                src="/about.png"
-                                loading="lazy"
-                                :quality="60"
-                                class="w-full max-w-sm rounded-lg object-cover"
-                            />
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <h2 class="font-bold text-2xl">Sobre Mim</h2>
-                            <p class="text-muted-foreground leading-relaxed">
-                                Olá, sou Cristian Camargo, desenvolvedor de software com foco em React, .NET e desenvolvimento mobile para Android. Atualmente trabalho na <strong class="text-foreground">Kognit</strong> como Desenvolvedor Front-End, construindo interfaces com React e aplicações mobile com React Native.
-                            </p>
-                            <p class="text-muted-foreground leading-relaxed">
-                                Minha trajetória começou no ecossistema Vue.js, onde desenvolvi aplicações robustas como a plataforma CygniAG (Cygni Agroscience). Com o tempo, ampliei minha stack para back-end com <strong class="text-foreground">.NET / C#</strong> e estou desenvolvendo aplicativos nativos para Android com <strong class="text-foreground">Kotlin e Jetpack Compose</strong>.
-                            </p>
-                            <p class="text-muted-foreground leading-relaxed">
-                                Além do código, tenho experiência em design com Figma — o que me permite pensar nas soluções do início ao fim, do layout ao deploy.
-                            </p>
+            <section>
+                <div class="flex items-center gap-3 mb-10">
+                    <div class="h-px flex-1 max-w-[2rem] bg-gradient-to-r from-violet-500 to-cyan-500"></div>
+                    <span class="section-label">Sobre Mim</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-cyan-500/20 rounded-2xl blur-2xl -z-10 scale-95"></div>
+                        <NuxtImg
+                            src="/about.png"
+                            loading="lazy"
+                            format="webp"
+                            :quality="65"
+                            sizes="100vw md:50vw lg:560px"
+                            placeholder
+                            class="w-full rounded-2xl object-cover dark:ring-1 dark:ring-white/[0.06] transition-opacity duration-500"
+                        />
+                    </div>
+                    <div class="flex flex-col gap-5">
+                        <h2 class="text-3xl font-black">
+                            Prazer, eu sou o
+                            <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+                                Cristian.
+                            </span>
+                        </h2>
+                        <p class="text-muted-foreground leading-relaxed">
+                            Desenvolvedor Full Stack com foco em front-end e mais de 4 anos de experiência. Hoje faço parte do time da <strong class="text-foreground font-semibold">Kognit</strong>, onde trabalho com React e React Native no dia a dia — mas minha trajetória vai muito além disso.
+                        </p>
+                        <p class="text-muted-foreground leading-relaxed">
+                            Ao longo da carreira, trabalhei em projetos bastante variados: sistemas de controle de estoque, plataformas financeiras, software de análise de mapas agrícolas com integração do Google Maps, e bots de automação para WhatsApp e Telegram que ajudam empresas a conectar seus sistemas e eliminar horas de trabalho manual.
+                        </p>
+                        <p class="text-muted-foreground leading-relaxed">
+                            Hoje estou expandindo para .NET no back-end e desenvolvendo um app de GPS agrícola para Android com Kotlin. Também trabalho com produtos SaaS — ajudando empresas a modernizarem seus processos com tecnologia feita sob medida.
+                        </p>
+                        <div class="flex gap-3 pt-2">
+                            <a href="/cv.pdf" target="_blank">
+                                <button class="gradient-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white">
+                                    Baixar CV
+                                </button>
+                            </a>
+                            <NuxtLink to="/contacts">
+                                <button class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium dark:bg-white/5 bg-gray-100 hover:dark:bg-white/8 hover:bg-gray-200 transition-colors border dark:border-white/[0.06] border-gray-200">
+                                    Entrar em contato
+                                </button>
+                            </NuxtLink>
                         </div>
                     </div>
-                </CardContent>
-            </Card>
+                </div>
+            </section>
         </RevealItem>
 
-        <!-- Skills por Categoria -->
+        <!-- ─── SKILLS ─── -->
         <RevealItem :delay="80">
-            <Card>
-                <CardHeader>
-                    <CardTitle>Skills & Tecnologias</CardTitle>
-                    <CardDescription>Organizado por área de atuação</CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <div class="grid xs:grid-cols-1 md:grid-cols-2 gap-4">
-                        <div
-                            v-for="category in skillCategories"
-                            :key="category.label"
-                            :class="['rounded-lg border p-4 flex flex-col gap-3', category.borderClass, category.bgClass]"
-                        >
-                            <div class="flex items-center gap-2">
-                                <div :class="['w-2.5 h-2.5 rounded-full flex-shrink-0', category.dotClass]" />
-                                <h3 :class="['font-bold text-xs uppercase tracking-wider', category.textClass]">
-                                    {{ category.label }}
-                                </h3>
+            <section>
+                <div class="flex items-center gap-3 mb-10">
+                    <div class="h-px flex-1 max-w-[2rem] bg-gradient-to-r from-violet-500 to-cyan-500"></div>
+                    <span class="section-label">Skills & Tecnologias</span>
+                </div>
+                <div class="grid xs:grid-cols-1 md:grid-cols-2 gap-4">
+                    <div
+                        v-for="category in skillCategories"
+                        :key="category.label"
+                        :class="['rounded-2xl border p-5 flex flex-col gap-4 transition-all duration-300 hover:-translate-y-0.5', category.borderClass, category.bgClass]"
+                    >
+                        <div class="flex items-center gap-2">
+                            <span class="text-lg">{{ category.icon }}</span>
+                            <h3 :class="['font-bold text-sm uppercase tracking-wider', category.textClass]">
+                                {{ category.label }}
+                            </h3>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <div
+                                v-for="skill in category.skills"
+                                :key="skill.name"
+                                class="flex items-center gap-1.5 dark:bg-black/20 bg-white rounded-lg px-2.5 py-1.5 text-sm font-medium dark:border-white/[0.06] border-gray-200/80 border hover:scale-105 transition-transform cursor-default"
+                            >
+                                <NuxtImg :src="skill.icon" class="w-4 h-4 object-contain flex-shrink-0" />
+                                {{ skill.name }}
                             </div>
-                            <div class="flex flex-wrap gap-2">
-                                <div
-                                    v-for="skill in category.skills"
-                                    :key="skill.name"
-                                    class="flex items-center gap-1.5 bg-background rounded-md px-2.5 py-1.5 text-sm font-medium border border-border/50 hover:shadow-sm transition-shadow"
-                                >
-                                    <NuxtImg :src="skill.icon" class="w-4 h-4 object-contain flex-shrink-0" />
-                                    {{ skill.name }}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </RevealItem>
+
+        <!-- ─── EXPERIÊNCIA ─── -->
+        <section>
+            <RevealItem>
+                <div class="flex items-center gap-3 mb-10">
+                    <div class="h-px flex-1 max-w-[2rem] bg-gradient-to-r from-violet-500 to-cyan-500"></div>
+                    <span class="section-label">Experiência Profissional</span>
+                </div>
+            </RevealItem>
+
+            <div class="flex flex-col">
+                <template v-for="(exp, idx) in experiences" :key="exp.company">
+                    <RevealItem direction="left" :delay="idx * 80">
+                        <div class="flex gap-5">
+                            <!-- Timeline line -->
+                            <div class="xs:hidden md:flex flex-col items-center flex-shrink-0 w-4">
+                                <div class="w-3 h-3 rounded-full mt-5 ring-4 dark:ring-background ring-white flex-shrink-0"
+                                    :class="exp.current ? 'bg-gradient-to-br from-violet-500 to-cyan-500 animate-pulse' : 'dark:bg-white/20 bg-gray-300'"
+                                ></div>
+                                <div v-if="idx < experiences.length - 1" class="flex-1 w-px dark:bg-white/[0.06] bg-gray-200 mt-1"></div>
+                            </div>
+
+                            <!-- Card -->
+                            <div :class="['flex-1 min-w-0 pb-6', idx === experiences.length - 1 ? 'pb-0' : '']">
+                                <div class="glow-card dark:bg-white/[0.02] bg-white rounded-2xl border dark:border-white/[0.06] border-gray-100 p-5">
+                                    <div class="flex items-start justify-between flex-wrap gap-2 mb-3">
+                                        <div>
+                                            <h3 class="font-bold">{{ exp.role }}</h3>
+                                            <a
+                                                v-if="exp.href"
+                                                :href="exp.href"
+                                                target="_blank"
+                                                class="text-sm text-muted-foreground hover:text-violet-400 transition-colors"
+                                            >
+                                                {{ exp.company }}
+                                            </a>
+                                            <p v-else class="text-sm text-muted-foreground">{{ exp.company }}</p>
+                                        </div>
+                                        <div class="flex items-center gap-2 flex-shrink-0">
+                                            <span v-if="exp.current" class="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                                Atual
+                                            </span>
+                                            <span class="text-xs text-muted-foreground">{{ exp.period }}</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-muted-foreground leading-relaxed mb-3">{{ exp.description }}</p>
+                                    <div class="flex flex-wrap gap-1.5">
+                                        <span
+                                            v-for="tag in exp.tags"
+                                            :key="tag"
+                                            class="text-xs px-2 py-0.5 rounded-full dark:bg-white/[0.05] bg-gray-100 dark:text-gray-300 text-gray-600 border dark:border-white/[0.06] border-gray-200"
+                                        >
+                                            {{ tag }}
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </CardContent>
-            </Card>
-        </RevealItem>
-
-        <!-- Experiência Profissional -->
-        <Card>
-            <CardHeader>
-                <CardTitle>Experiência Profissional</CardTitle>
-            </CardHeader>
-            <CardContent>
-                <div class="flex flex-col">
-
-                    <!-- Kognit -->
-                    <RevealItem direction="left">
-                        <div class="flex gap-5">
-                            <div class="xs:hidden md:flex flex-col items-center flex-shrink-0">
-                                <div class="w-3 h-3 rounded-full bg-foreground mt-1.5 ring-4 ring-background flex-shrink-0" />
-                                <div class="flex-1 w-px bg-border mt-1" />
-                            </div>
-                            <div class="pb-6 flex-1 min-w-0">
-                                <Card class="hover:shadow-md transition-shadow duration-300">
-                                    <CardHeader>
-                                        <div class="flex items-start justify-between flex-wrap gap-2">
-                                            <div>
-                                                <CardTitle>Desenvolvedor Front End</CardTitle>
-                                                <CardDescription>
-                                                    <a href="https://www.kognit.com.br/" target="_blank" class="hover:underline">Kognit</a>
-                                                </CardDescription>
-                                            </div>
-                                            <span class="text-xs bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 rounded-full px-2.5 py-1 font-medium flex-shrink-0">
-                                                Atual
-                                            </span>
-                                        </div>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <p class="text-muted-foreground text-sm leading-relaxed">
-                                            Desenvolvimento de aplicações web com React e Styled Components, e mobile com React Native. Implemento features, corrijo bugs e aprimoro a UX, colaborando com design e back-end para entregar soluções performáticas e bem estruturadas.
-                                        </p>
-                                    </CardContent>
-                                    <CardFooter>
-                                        <div class="flex items-center gap-2 text-xs text-muted-foreground">
-                                            <span>Jan 2025</span>
-                                            <div class="w-1 h-1 rounded-full bg-muted-foreground" />
-                                            <span>Atualmente</span>
-                                        </div>
-                                    </CardFooter>
-                                </Card>
-                            </div>
-                        </div>
                     </RevealItem>
+                </template>
+            </div>
+        </section>
 
-                    <!-- Cygni -->
-                    <RevealItem direction="left" :delay="100">
-                        <div class="flex gap-5">
-                            <div class="xs:hidden md:flex flex-col items-center flex-shrink-0">
-                                <div class="w-3 h-3 rounded-full bg-foreground mt-1.5 ring-4 ring-background flex-shrink-0" />
-                                <div class="flex-1 w-px bg-border mt-1" />
-                            </div>
-                            <div class="pb-6 flex-1 min-w-0">
-                                <Card class="hover:shadow-md transition-shadow duration-300">
-                                    <CardHeader>
-                                        <CardTitle>Desenvolvedor Front End</CardTitle>
-                                        <CardDescription>
-                                            <a href="https://cygniagroscience.com/home" target="_blank" class="hover:underline">Cygni Agroscience</a>
-                                        </CardDescription>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <p class="text-muted-foreground text-sm leading-relaxed">
-                                            Desenvolvimento front-end na plataforma CygniAG — software agrícola de análise de imagens de satélite para tomada de decisão. Vue.js e Tailwind CSS com integração da API do Google Maps, focado em melhorar UX e performance.
-                                        </p>
-                                    </CardContent>
-                                    <CardFooter>
-                                        <div class="flex items-center gap-2 text-xs text-muted-foreground">
-                                            <span>Ago 2022</span>
-                                            <div class="w-1 h-1 rounded-full bg-muted-foreground" />
-                                            <span>Set 2024</span>
-                                        </div>
-                                    </CardFooter>
-                                </Card>
-                            </div>
-                        </div>
-                    </RevealItem>
-
-                    <!-- Freelancer -->
-                    <RevealItem direction="left" :delay="200">
-                        <div class="flex gap-5">
-                            <div class="xs:hidden md:flex flex-col items-center flex-shrink-0">
-                                <div class="w-3 h-3 rounded-full bg-foreground mt-1.5 ring-4 ring-background flex-shrink-0" />
-                                <div class="flex-1 w-px bg-border mt-1" />
-                            </div>
-                            <div class="pb-6 flex-1 min-w-0">
-                                <Card class="hover:shadow-md transition-shadow duration-300">
-                                    <CardHeader>
-                                        <CardTitle>Desenvolvedor Web</CardTitle>
-                                        <CardDescription>Freelancer</CardDescription>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <p class="text-muted-foreground text-sm leading-relaxed">
-                                            Desenvolvimento de sites completos e landing pages para empresas locais. Período de crescimento acelerado aplicando e aprofundando habilidades em diferentes stacks e clientes.
-                                        </p>
-                                    </CardContent>
-                                    <CardFooter>
-                                        <div class="flex items-center gap-2 text-xs text-muted-foreground">
-                                            <span>Jun 2021</span>
-                                            <div class="w-1 h-1 rounded-full bg-muted-foreground" />
-                                            <span>Atualmente</span>
-                                        </div>
-                                    </CardFooter>
-                                </Card>
-                            </div>
-                        </div>
-                    </RevealItem>
-
-                    <!-- Geofarm -->
-                    <RevealItem direction="left" :delay="300">
-                        <div class="flex gap-5">
-                            <div class="xs:hidden md:flex flex-col items-center flex-shrink-0">
-                                <div class="w-3 h-3 rounded-full bg-foreground mt-1.5 ring-4 ring-background flex-shrink-0" />
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <Card class="hover:shadow-md transition-shadow duration-300">
-                                    <CardHeader>
-                                        <CardTitle>Coordenador de Tecnologia e Inovação</CardTitle>
-                                        <CardDescription>
-                                            <a href="https://geofarmagro.com.br/" target="_blank" class="hover:underline">Geofarm Agricultura de Precisão</a>
-                                        </CardDescription>
-                                    </CardHeader>
-                                    <CardContent>
-                                        <p class="text-muted-foreground text-sm leading-relaxed">
-                                            Liderança no setor de agricultura de precisão — gestão de equipamentos como piloto automático, taxa variável em plantadeiras e GPS agrícola. Experiência com gestão de equipes e resolução de problemas técnicos de campo.
-                                        </p>
-                                    </CardContent>
-                                    <CardFooter>
-                                        <div class="flex items-center gap-2 text-xs text-muted-foreground">
-                                            <span>Ago 2018</span>
-                                            <div class="w-1 h-1 rounded-full bg-muted-foreground" />
-                                            <span>Jul 2022</span>
-                                        </div>
-                                    </CardFooter>
-                                </Card>
-                            </div>
-                        </div>
-                    </RevealItem>
-
-                </div>
-            </CardContent>
-        </Card>
-
-    </section>
+    </div>
 </template>

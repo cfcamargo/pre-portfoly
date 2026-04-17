@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Settings, Moon, Sun, MonitorCog } from 'lucide-vue-next';
+import { Moon, Sun, MonitorCog } from 'lucide-vue-next';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import 'animate.css';
 import {
@@ -16,7 +16,6 @@ import {
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 
-
 const colorMode = useColorMode()
 const showMenu = ref(false)
 
@@ -24,169 +23,132 @@ const changeTheme = (theme: string) => {
     colorMode.preference = theme
 }
 
-const toogleMenu = () => {
+const toggleMenu = () => {
     showMenu.value = !showMenu.value
 }
 
-const defineAnimationToHamburgueMenu = computed(() => {
-    if(showMenu.value) {
-        return 'hamburger--spin-r is-active'
-    } else {
-        return 'hamburger--spin'
-    }
-})
+const navLinks = [
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'Sobre' },
+    { to: '/projects', label: 'Projetos' },
+    { to: '/contacts', label: 'Contato' },
+]
 </script>
 
-<template> 
-    <header class="w-full h-24 bg-zinc-900">
+<template>
+    <header class="fixed top-0 left-0 right-0 z-50 h-16 border-b dark:border-white/[0.04] border-gray-200/60 dark:bg-background/80 bg-white/80 backdrop-blur-xl">
         <Container class="flex items-center justify-between h-full">
-            <NuxtLink to="/" class="flex items-center gap-2 xs:pl-4">
-                <div class="w-12">
-                    <NuxtImg class="w-full" src="/logo-dark.png"/>
+
+            <NuxtLink to="/" class="flex items-center gap-2.5 group">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center flex-shrink-0 group-hover:shadow-lg group-hover:shadow-violet-500/30 transition-shadow">
+                    <span class="text-white font-black text-xs">CC</span>
                 </div>
-                <h2 class="xs:text-lg md:text-2xl font-bold text-white">
-                    Cristian Camargo
-                </h2>
+                <span class="font-bold text-sm hidden sm:block">
+                    <span class="bg-gradient-to-r from-violet-500 to-cyan-500 bg-clip-text text-transparent">Cristian</span>
+                    <span class="text-foreground"> Camargo</span>
+                </span>
             </NuxtLink>
 
-            <div class="xs:hidden md:flex items-center gap-8">
-                <nav class="flex items-center font-bold gap-4 text-white">
-                    <NuxtLink to="/">
-                        HOME
-                    </NuxtLink>
-                    <NuxtLink to="/about">
-                        SOBRE
-                    </NuxtLink>
-                    <NuxtLink to="/projects">
-                        PROJETOS
-                    </NuxtLink>
-                    <NuxtLink to="/contacts">
-                        CONTATO
+  
+            <div class="hidden md:flex items-center gap-6">
+                <nav class="flex items-center gap-6">
+                    <NuxtLink
+                        v-for="link in navLinks"
+                        :key="link.to"
+                        :to="link.to"
+                        active-class="!text-foreground"
+                        class="relative group text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-1"
+                    >
+                        {{ link.label }}
+                        <span class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-violet-500 to-cyan-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                     </NuxtLink>
                 </nav>
 
                 <ClientOnly>
                     <DropdownMenu>
-                        <DropdownMenuTrigger>
-                            <Settings :size="20" color="white"/>
+                        <DropdownMenuTrigger class="flex items-center justify-center w-8 h-8 rounded-full dark:bg-white/5 bg-gray-100 hover:dark:bg-white/10 hover:bg-gray-200 transition-colors">
+                            <Sun v-if="$colorMode.value === 'light'" :size="15" />
+                            <Moon v-else :size="15" />
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            <DropdownMenuLabel>
-                                Tema
-                            </DropdownMenuLabel>
+                        <DropdownMenuContent align="end">
+                            <DropdownMenuLabel>Tema</DropdownMenuLabel>
                             <DropdownMenuSeparator />
-                                <ToggleGroup type="single" :model-value="$colorMode.preference">
-                                    <ToggleGroupItem value="dark" @click="changeTheme('dark')">
-                                        <TooltipProvider>
-                                            <Tooltip>
-                                            <TooltipTrigger>
-                                                <Moon />
-                                            </TooltipTrigger>
-                                            <TooltipContent>
-                                                <p>Dark</p>
-                                            </TooltipContent>
-                                            </Tooltip>
-                                        </TooltipProvider>
-                                    </ToggleGroupItem>
-                                    <ToggleGroupItem value="light" @click="changeTheme('light')">
-                                        <TooltipProvider>
-                                            <Tooltip>
-                                            <TooltipTrigger>
-                                                <Sun />
-                                            </TooltipTrigger>
-                                            <TooltipContent>
-                                                <p>Ligth</p>
-                                            </TooltipContent>
-                                            </Tooltip>
-                                        </TooltipProvider>
-                                    </ToggleGroupItem>
-                                    <ToggleGroupItem value="system" @click="changeTheme('system')">
-                                        <TooltipProvider>
-                                            <Tooltip>
-                                            <TooltipTrigger>
-                                                <MonitorCog />
-                                            </TooltipTrigger>
-                                            <TooltipContent>
-                                                <p>System</p>
-                                            </TooltipContent>
-                                            </Tooltip>
-                                        </TooltipProvider>
-                                    </ToggleGroupItem>
-                                </ToggleGroup>
+                            <ToggleGroup type="single" :model-value="$colorMode.preference">
+                                <ToggleGroupItem value="dark" @click="changeTheme('dark')">
+                                    <TooltipProvider>
+                                        <Tooltip>
+                                            <TooltipTrigger><Moon :size="16" /></TooltipTrigger>
+                                            <TooltipContent><p>Dark</p></TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
+                                </ToggleGroupItem>
+                                <ToggleGroupItem value="light" @click="changeTheme('light')">
+                                    <TooltipProvider>
+                                        <Tooltip>
+                                            <TooltipTrigger><Sun :size="16" /></TooltipTrigger>
+                                            <TooltipContent><p>Light</p></TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
+                                </ToggleGroupItem>
+                                <ToggleGroupItem value="system" @click="changeTheme('system')">
+                                    <TooltipProvider>
+                                        <Tooltip>
+                                            <TooltipTrigger><MonitorCog :size="16" /></TooltipTrigger>
+                                            <TooltipContent><p>Sistema</p></TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
+                                </ToggleGroupItem>
+                            </ToggleGroup>
                         </DropdownMenuContent>
                     </DropdownMenu>
                 </ClientOnly>
             </div>
 
-            <div class="xs:flex md:hidden">
-                <button class="hamburger" type="button" @click="toogleMenu" :class="defineAnimationToHamburgueMenu">
+  
+            <div class="flex md:hidden">
+                <button
+                    type="button"
+                    @click="toggleMenu"
+                    class="hamburger text-foreground"
+                    :class="showMenu ? 'hamburger--spin-r is-active' : 'hamburger--spin'"
+                >
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
                 </button>
             </div>
 
-            <transition 
-                enter-active-class="animate__animated animate__fadeInUp" 
+            <transition
+                enter-active-class="animate__animated animate__fadeInUp"
                 leave-active-class="animate__animated animate__fadeOutDown"
             >
-                <div 
-                    v-if="showMenu" 
-                    class="w-full flex h-[calc(100vh_-_96px)] flex-col fixed bottom-0 left-0 right-0 bg-white z-50 text-black" 
+                <div
+                    v-if="showMenu"
+                    class="flex flex-col h-[calc(100dvh_-_4rem)] fixed top-16 left-0 right-0 bottom-0 z-50 bg-white dark:bg-zinc-950"
                 >
                     <nav class="flex-1 flex flex-col justify-center items-center gap-8">
-                        <NuxtLink class="font-bold text-lg" @click="toogleMenu" to="/">
-                            HOME
-                        </NuxtLink>
-                        <NuxtLink class="font-bold text-lg" @click="toogleMenu" to="/about">
-                            SOBRE
-                        </NuxtLink>
-                        <NuxtLink class="font-bold text-lg" @click="toogleMenu" to="/projects">
-                            PROJETOS
-                        </NuxtLink>
-                        <NuxtLink class="font-bold text-lg" @click="toogleMenu" to="/contacts">
-                            CONTATO
+                        <NuxtLink
+                            v-for="link in navLinks"
+                            :key="link.to"
+                            :to="link.to"
+                            @click="toggleMenu"
+                            class="text-2xl font-bold text-muted-foreground hover:text-foreground transition-colors"
+                            active-class="!text-foreground"
+                        >
+                            {{ link.label }}
                         </NuxtLink>
                     </nav>
-
-                    <div class="py-8">
-                        <h4 class="py-2 font-bold text-center">Tema</h4>
+                    <div class="py-8 flex flex-col items-center gap-4">
+                        <p class="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Tema</p>
                         <ToggleGroup type="single" :model-value="$colorMode.preference">
-                            <ToggleGroupItem value="dark" @click="changeTheme('dark')" class="p-6">
-                                <TooltipProvider>
-                                    <Tooltip>
-                                    <TooltipTrigger>
-                                        <Moon :size="30"/>
-                                    </TooltipTrigger>
-                                    <TooltipContent>
-                                        <p>Dark</p>
-                                    </TooltipContent>
-                                    </Tooltip>
-                                </TooltipProvider>
+                            <ToggleGroupItem value="dark" @click="changeTheme('dark')" class="p-5">
+                                <Moon :size="22" />
                             </ToggleGroupItem>
-                            <ToggleGroupItem value="light" @click="changeTheme('light')" class="p-6">
-                                <TooltipProvider>
-                                    <Tooltip>
-                                    <TooltipTrigger>
-                                        <Sun :size="30"/>
-                                    </TooltipTrigger>
-                                    <TooltipContent>
-                                        <p>Ligth</p>
-                                    </TooltipContent>
-                                    </Tooltip>
-                                </TooltipProvider>
+                            <ToggleGroupItem value="light" @click="changeTheme('light')" class="p-5">
+                                <Sun :size="22" />
                             </ToggleGroupItem>
-                            <ToggleGroupItem value="system" @click="changeTheme('system')" class="p-6">
-                                <TooltipProvider>
-                                    <Tooltip>
-                                    <TooltipTrigger>
-                                        <MonitorCog :size="30"/>
-                                    </TooltipTrigger>
-                                    <TooltipContent>
-                                        <p>System</p>
-                                    </TooltipContent>
-                                    </Tooltip>
-                                </TooltipProvider>
+                            <ToggleGroupItem value="system" @click="changeTheme('system')" class="p-5">
+                                <MonitorCog :size="22" />
                             </ToggleGroupItem>
                         </ToggleGroup>
                     </div>

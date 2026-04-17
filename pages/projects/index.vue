@@ -1,211 +1,155 @@
 <script lang="ts" setup>
-useHead({
-    title: 'Cristian Camargo | Projetos',
-})
-import { Button } from '@/components/ui/button'
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from '@/components/ui/card'
+import { Github, ExternalLink } from 'lucide-vue-next'
+
+useHead({ title: 'Cristian Camargo | Projetos' })
+
+const projects = [
+    {
+        title: 'Modular Pré Moldados',
+        description: 'A empresa controlava tudo em planilhas. Desenvolvi um sistema completo para substituir isso — com controle de pedidos, estoque e clientes num só lugar.',
+        cover: '/covers/modular.png',
+        tags: ['Nuxt.js', 'Vue.js', 'AdonisJS', 'Tailwind CSS'],
+        status: 'Em desenvolvimento',
+        links: [
+            { label: 'Web', href: 'https://github.com/cfcamargo/modular-web', type: 'github' },
+            { label: 'API', href: 'https://github.com/cfcamargo/modular-api', type: 'github' },
+        ],
+    },
+    {
+        title: 'RM Agro',
+        description: 'Site institucional para empresa de gestão de risco no agronegócio. Construído em duas línguas (PT/EN) para alcançar o mercado internacional.',
+        cover: '/covers/rmagro.png',
+        tags: ['Nuxt.js', 'Vue.js', 'Tailwind CSS', 'i18n'],
+        links: [
+            { label: 'Código', href: 'https://github.com/cfcamargo/rm-group', type: 'github' },
+            { label: 'Produção', href: 'https://rmgroup.com.br', type: 'external' },
+        ],
+    },
+    {
+        title: 'Cuiabá Imports',
+        description: 'O catálogo de produtos vivia numa planilha do Google. Transformei isso num site dinâmico, onde qualquer atualização na planilha reflete automaticamente no site.',
+        cover: '/covers/cuiaba.png',
+        tags: ['Nuxt.js', 'Vue.js', 'AdonisJS', 'Tailwind CSS'],
+        links: [
+            { label: 'Web', href: 'https://github.com/cfcamargo/cuiaba-imports', type: 'github' },
+            { label: 'API', href: 'https://github.com/cfcamargo/api-cuiabaImports', type: 'github' },
+            { label: 'Produção', href: 'https://cuiabaimports.com/', type: 'external' },
+        ],
+    },
+    {
+        title: 'DR Cosméticos',
+        description: 'Loja de cosméticos sem presença na internet. Criei um site leve e fácil de navegar para levar os produtos dela ao mundo digital.',
+        cover: '/covers/dr.png',
+        tags: ['Nuxt.js', 'Vue.js', 'Tailwind CSS'],
+        links: [
+            { label: 'Código', href: 'https://github.com/cfcamargo/dr-cosmetics-new', type: 'github' },
+            { label: 'Produção', href: 'https://drcosmeticospp.com.br', type: 'external' },
+        ],
+    },
+    {
+        title: 'Giselle Hage',
+        description: 'Site portfólio para uma profissional de harmonização facial mostrar seu trabalho e conquistar novos pacientes pela internet.',
+        cover: '/covers/giselle-hage.png',
+        tags: ['Vue.js', 'Nuxt.js', 'Tailwind CSS'],
+        links: [
+            { label: 'Código', href: 'https://github.com/cfcamargo/giselle-hage', type: 'github' },
+            { label: 'Produção', href: 'https://www.dragisellehage.com/', type: 'external' },
+        ],
+    },
+    {
+        title: 'Imperial Casino',
+        description: 'Site para cassino virtual com suporte a três idiomas (PT, EN e ES), pensado para alcançar diferentes públicos de forma simples e envolvente.',
+        cover: '/covers/imperial.png',
+        tags: ['React', 'TypeScript', 'Tailwind CSS', 'i18n'],
+        links: [
+            { label: 'Código', href: 'https://github.com/cfcamargo/imperial-games', type: 'github' },
+            { label: 'Produção', href: 'https://imperialcasinopjc.com/es', type: 'external' },
+        ],
+    },
+]
 </script>
 
 <template>
-    <section id="projects" class="py-8 flex gap-4">
-        <Card>
-            <CardHeader>
-                <CardTitle class="font-bold text-2xl">
-                    Projetos Recentes
-                </CardTitle>
-                <CardDescription>
-                    Essa página lista alguns dos meus projetos. Confira outros projetos em meu <a href="https://github.com/cfcamargo" class="underline">GitHub</a>.
-                </CardDescription>
-            </CardHeader>
-            <CardContent class="grid xs:grid-cols-1 md:grid-cols-3 gap-4">
-                <Card>
-                    <CardHeader>
-                        <CardTitle>
-                            <CardTitle>
-                                <NuxtImg src="/covers/modular.png"/>
-                            </CardTitle>
-                            <CardDescription class="font-bold mt-4 text-xl">
-                                    MODULAR PRE MOLDADOS
-                            </CardDescription>
-                        </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p class="text-zinc-700 dark:text-white">
-                            Este é um projeto full stack desenvolvido para a Modular Pré Moldados, com o objetivo de substituir o controle de pedidos feito em planilhas por um sistema mais robusto e eficiente. Utilizando Nuxt.js, Vue.js, ChadCN e Tailwind CSS no front-end, e Adonis JS no back-end, o sistema foi projetado para atender às necessidades específicas da empresa, oferecendo um controle abrangente de pedidos, estoque, clientes, e mais.
-                        </p>
-                    </CardContent>
-                    <CardFooter class="flex flex-col gap-2">
-                        <a class="w-full" href="gh repo clone cfcamargo/modular-web" target="_blank">
-                            <Button class="w-full">
-                                Repositório Web
-                            </Button>
-                        </a>
-                        <a class="w-full" href="https://github.com/cfcamargo/modular-api" target="_blank">
-                            <Button class="w-full">
-                                Repositório API
-                            </Button>
-                        </a>
-                        <span class="text-xs text-red-500">Este projeto está em desenvolvimento</span>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardHeader>
-                        <CardTitle>
-                            <CardTitle>
-                                <NuxtImg src="/covers/rmagro.png"/>
-                            </CardTitle>
-                            <CardDescription class="font-bold mt-4 text-xl">
-                                RM AGRO
-                            </CardDescription>
-                        </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p class="text-zinc-700 dark:text-white">
-                            Este projeto visa estabelecer a presença online da RM Agro, uma empresa especializada em gestão de risco em commodities agrícolas e de transportes. O objetivo principal é criar um site informativo e intuitivo, utilizando as tecnologias Nuxt.js, Vue.js e Tailwind CSS. Além disso, foi implementada a funcionalidade de internacionalização (i18n), permitindo que o conteúdo esteja disponível tanto em português quanto em inglês, ampliando o alcance da empresa para um público internacional.
-                        </p>
-                    </CardContent>
-                    <CardFooter class="flex flex-col gap-2">
-                        <a class="w-full" href="https://github.com/cfcamargo/rm-group" target="_blank">
-                            <Button class="w-full">
-                                Repositório
-                            </Button>
-                        </a>
-                        <a class="w-full" href="https://rmgroup.com.br" target="_blank">
-                            <Button class="w-full">
-                                Produção
-                            </Button>
-                        </a>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardHeader>
-                        <CardTitle>
-                            <CardTitle>
-                                <NuxtImg src="/covers/cuiaba.png"/>
-                            </CardTitle>
-                            <CardDescription class="font-bold mt-4 text-xl">
-                                CUIABA IMPORTS
-                            </CardDescription>
-                        </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p class="text-zinc-700 dark:text-white">
-                            Este projeto foi desenvolvido para uma empresa especializada na venda de produtos eletrônicos. Utilizando Nuxt.js, Vue.js e Tailwind CSS no front-end e Adonis JS no back-end, o objetivo principal foi replicar uma planilha do Google em um site, permitindo a listagem dinâmica dos produtos da loja.
-                        </p>
-                    </CardContent>
-                    <CardFooter class="flex flex-col gap-2">
-                        <a class="w-full" href="https://github.com/cfcamargo/cuiaba-imports" target="_blank">
-                            <Button class="w-full">
-                                Repositório WEB
-                            </Button>
-                        </a>
-                        <a class="w-full" href="https://github.com/cfcamargo/api-cuiabaImports" target="_blank">
-                            <Button class="w-full">
-                                Repositório API
-                            </Button>
-                        </a>
-                        <a class="w-full" href="https://cuiabaimports.com/" target="_blank">
-                            <Button class="w-full">
-                                Produção
-                            </Button>
-                        </a>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardHeader>
-                        <CardTitle>
-                            <CardTitle>
-                                <NuxtImg src="/covers/dr.png"/>
-                            </CardTitle>
-                            <CardDescription class="font-bold mt-4 text-xl">
-                                DR COSTMÉTICOS E ESSENCIAS
-                            </CardDescription>
-                        </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p class="text-zinc-700 dark:text-white">
-                            Este projeto foi desenvolvido para a DR Cosméticos, utilizando Nuxt.js, Vue.js e Tailwind CSS, com o objetivo de estabelecer a presença online da loja, permitindo que seus produtos sejam acessíveis na internet. O site foi criado para ser simples, leve e funcional, garantindo uma experiência de usuário agradável e eficiente.
-                        </p>
-                    </CardContent>
-                    <CardFooter class="flex flex-col gap-2">
-                        <a class="w-full" href="https://github.com/cfcamargo/dr-cosmetics-new" target="_blank">
-                            <Button class="w-full">
-                                Repositório
-                            </Button>
-                        </a>
-                        <a class="w-full" href="https://drcosmeticospp.com.br" target="_blank">
-                            <Button class="w-full">
-                                Produção
-                            </Button>
-                        </a>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardHeader>
-                        <CardTitle>
-                            <CardTitle>
-                                <NuxtImg src="/covers/giselle-hage.png"/>
-                            </CardTitle>
-                            <CardDescription class="font-bold mt-4 text-xl">
-                                GISELLE HAGE
-                            </CardDescription>
-                        </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p class="text-zinc-700 dark:text-white">
-                            Este projeto foi desenvolvido para Giselle Hage, uma profissional especializada em harmonização orofacial. Utilizando Vue.js, Nuxt.js e Tailwind CSS, criamos um site para levar o trabalho dela para a internet, permitindo que seus serviços sejam apresentados de forma clara e acessível aos clientes.
-                        </p>
-                    </CardContent>
-                    <CardFooter class="flex flex-col gap-2">
-                        <a class="w-full" href="https://github.com/cfcamargo/giselle-hage" target="_blank">
-                            <Button class="w-full">
-                                Repositório
-                            </Button>
-                        </a>
-                        <a class="w-full" href="https://www.dragisellehage.com/" target="_blank">
-                            <Button class="w-full">
-                                Produção
-                            </Button>
-                        </a>
-                    </CardFooter>
-                </Card>
-                <Card>
-                    <CardHeader>
-                        <CardTitle>
-                            <CardTitle>
-                                <NuxtImg src="/covers/imperial.png"/>
-                            </CardTitle>
-                            <CardDescription class="font-bold mt-4 text-xl">
-                                IMPERIAL CASINO
-                            </CardDescription>
-                        </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p class="text-zinc-700 dark:text-white">
-                            Este projeto foi desenvolvido para o Imperial Casino, com o objetivo de estabelecer sua presença online, permitindo que os usuários explorem o casino de maneira virtual. O site foi construído utilizando React, TypeScript e Tailwind CSS, proporcionando uma experiência interativa e envolvente. Além disso, foi implementada a funcionalidade de internacionalização (i18n), oferecendo suporte aos idiomas português, inglês e espanhol.
-                        </p>
-                    </CardContent>
-                    <CardFooter class="flex flex-col gap-2">
-                        <a class="w-full" href="https://github.com/cfcamargo/imperial-games" target="_blank">
-                            <Button class="w-full">
-                                Repositório
-                            </Button>
-                        </a>
-                        <a class="w-full" href="https://imperialcasinopjc.com/es" target="_blank">
-                            <Button class="w-full">
-                                Produção
-                            </Button>
-                        </a>
-                    </CardFooter>
-                </Card>
-            </CardContent>
-        </Card>
-    </section>
+    <div class="py-12 flex flex-col gap-12">
+
+        <!-- Header -->
+        <RevealItem>
+            <div class="flex items-start justify-between flex-wrap gap-4">
+                <div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="h-px w-8 bg-gradient-to-r from-violet-500 to-cyan-500"></div>
+                        <span class="section-label">Portfólio</span>
+                    </div>
+                    <h1 class="text-3xl md:text-4xl font-black">
+                        Projetos
+                        <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">Recentes</span>
+                    </h1>
+                    <p class="text-muted-foreground mt-2 text-sm">
+                        Confira mais projetos no meu
+                        <a href="https://github.com/cfcamargo" target="_blank" class="text-violet-400 hover:text-violet-300 underline underline-offset-2 transition-colors">GitHub</a>.
+                    </p>
+                </div>
+            </div>
+        </RevealItem>
+
+        <!-- Grid -->
+        <div class="grid xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <RevealItem
+                v-for="(project, idx) in projects"
+                :key="project.title"
+                :delay="(idx % 3) * 80"
+            >
+                <div class="glow-card flex flex-col h-full dark:bg-white/[0.02] bg-white rounded-2xl border dark:border-white/[0.06] border-gray-100 overflow-hidden group">
+
+                    <!-- Cover image -->
+                    <div class="relative overflow-hidden aspect-video bg-gray-100 dark:bg-white/[0.03]">
+                        <NuxtImg
+                            :src="project.cover"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy"
+                        />
+                        <!-- Gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <!-- Status badge -->
+                        <div v-if="project.status" class="absolute top-3 right-3 text-xs font-medium px-2.5 py-1 rounded-full bg-amber-500/90 text-white backdrop-blur-sm">
+                            {{ project.status }}
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="flex flex-col flex-1 p-5 gap-3">
+                        <h2 class="font-bold text-base leading-snug">{{ project.title }}</h2>
+                        <p class="text-sm text-muted-foreground leading-relaxed flex-1">{{ project.description }}</p>
+
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-1.5">
+                            <span
+                                v-for="tag in project.tags"
+                                :key="tag"
+                                class="text-xs px-2 py-0.5 rounded-full dark:bg-white/[0.05] bg-gray-100 dark:text-gray-300 text-gray-600 border dark:border-white/[0.06] border-gray-200"
+                            >
+                                {{ tag }}
+                            </span>
+                        </div>
+
+                        <!-- Links -->
+                        <div class="flex flex-wrap gap-2 pt-1">
+                            <a
+                                v-for="link in project.links"
+                                :key="link.label"
+                                :href="link.href"
+                                target="_blank"
+                                class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg dark:bg-white/[0.05] bg-gray-100 hover:dark:bg-white/10 hover:bg-gray-200 transition-colors border dark:border-white/[0.06] border-gray-200"
+                            >
+                                <Github v-if="link.type === 'github'" :size="12" />
+                                <ExternalLink v-else :size="12" />
+                                {{ link.label }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </RevealItem>
+        </div>
+
+    </div>
 </template>
