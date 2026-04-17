@@ -80,6 +80,18 @@ module.exports = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
         },
+        "fade-in-up": {
+          from: { opacity: '0', transform: 'translateY(24px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        "fade-in": {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+        "blink-cursor": {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -87,6 +99,9 @@ module.exports = {
         "collapsible-down": "collapsible-down 0.2s ease-in-out",
         "collapsible-up": "collapsible-up 0.2s ease-in-out",
         "marquee": 'marquee 30s linear infinite',
+        "fade-in-up": "fade-in-up 0.65s ease-out forwards",
+        "fade-in": "fade-in 0.5s ease-out forwards",
+        "blink-cursor": "blink-cursor 1s step-end infinite",
       },
     },
   },
