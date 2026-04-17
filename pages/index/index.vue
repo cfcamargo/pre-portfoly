@@ -82,19 +82,6 @@ onMounted(() => {
                             </Button>
                         </a>
                     </div>
-
-                    <!-- Stats -->
-                    <div class="flex items-center gap-6 pt-2">
-                        <template v-for="(stat, i) in stats" :key="stat.label">
-                            <div class="text-center">
-                                <p class="text-2xl font-black bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent leading-none">
-                                    {{ stat.value }}
-                                </p>
-                                <p class="text-xs text-muted-foreground mt-0.5">{{ stat.label }}</p>
-                            </div>
-                            <div v-if="i < stats.length - 1" class="h-8 w-px dark:bg-white/8 bg-gray-200"></div>
-                        </template>
-                    </div>
                 </div>
 
                 <!-- Right — Lottie -->
