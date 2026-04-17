@@ -51,16 +51,16 @@ const socialLinks = [
         handle: 'contato@camargodev.com.br',
         href: 'mailto:contato@camargodev.com.br',
         icon: Mail,
-        color: 'dark:hover:border-violet-400/30 hover:border-violet-400/50',
-        bg: 'dark:group-hover:bg-violet-400/5 group-hover:bg-violet-50',
+        color: 'dark:hover:border-purple-400/30 hover:border-purple-400/50',
+        bg: 'dark:group-hover:bg-purple-400/5 group-hover:bg-purple-50',
     },
     {
         label: 'Currículo',
         handle: 'Download PDF',
         href: '/cv.pdf',
         icon: FileText,
-        color: 'dark:hover:border-cyan-400/30 hover:border-cyan-400/50',
-        bg: 'dark:group-hover:bg-cyan-400/5 group-hover:bg-cyan-50',
+        color: 'dark:hover:border-violet-400/30 hover:border-violet-400/50',
+        bg: 'dark:group-hover:bg-violet-400/5 group-hover:bg-violet-50',
     },
 ]
 </script>
@@ -72,13 +72,13 @@ const socialLinks = [
         <RevealItem>
             <div class="text-center flex flex-col gap-4">
                 <div class="flex items-center justify-center gap-3">
-                    <div class="h-px w-8 bg-gradient-to-r from-violet-500 to-cyan-500"></div>
+                    <div class="h-px w-8 bg-gradient-to-r from-purple-500 to-violet-500"></div>
                     <span class="section-label">Contato</span>
-                    <div class="h-px w-8 bg-gradient-to-r from-cyan-500 to-violet-500"></div>
+                    <div class="h-px w-8 bg-gradient-to-r from-violet-500 to-purple-500"></div>
                 </div>
                 <h1 class="text-3xl md:text-4xl font-black">
                     Vamos
-                    <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+                    <span class="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
                         conversar?
                     </span>
                 </h1>

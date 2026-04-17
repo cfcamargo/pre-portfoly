@@ -56,16 +56,16 @@ const projects = [
             <div class="flex items-start justify-between flex-wrap gap-4">
                 <div>
                     <div class="flex items-center gap-3 mb-3">
-                        <div class="h-px w-8 bg-gradient-to-r from-violet-500 to-cyan-500"></div>
+                        <div class="h-px w-8 bg-gradient-to-r from-purple-500 to-violet-500"></div>
                         <span class="section-label">Portfólio</span>
                     </div>
                     <h1 class="text-3xl md:text-4xl font-black">
                         Projetos
-                        <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">Recentes</span>
+                        <span class="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">Recentes</span>
                     </h1>
                     <p class="text-muted-foreground mt-2 text-sm">
                         Confira mais projetos no meu
-                        <a href="https://github.com/cfcamargo" target="_blank" class="text-violet-400 hover:text-violet-300 underline underline-offset-2 transition-colors">GitHub</a>.
+                        <a href="https://github.com/cfcamargo" target="_blank" class="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors">GitHub</a>.
                     </p>
                 </div>
             </div>

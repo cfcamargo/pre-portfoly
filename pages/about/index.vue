@@ -123,12 +123,12 @@ const experiences = [
         <RevealItem>
             <section>
                 <div class="flex items-center gap-3 mb-10">
-                    <div class="h-px flex-1 max-w-[2rem] bg-gradient-to-r from-violet-500 to-cyan-500"></div>
+                    <div class="h-px flex-1 max-w-[2rem] bg-gradient-to-r from-purple-500 to-violet-500"></div>
                     <span class="section-label">Sobre Mim</span>
                 </div>
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-violet-500/20 to-cyan-500/20 rounded-2xl blur-2xl -z-10 scale-95"></div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-2xl blur-2xl -z-10 scale-95"></div>
                         <NuxtImg
                             src="/about.png"
                             loading="lazy"
@@ -142,7 +142,7 @@ const experiences = [
                     <div class="flex flex-col gap-5">
                         <h2 class="text-3xl font-black">
                             Prazer, eu sou o
-                            <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">
+                            <span class="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
                                 Cristian.
                             </span>
                         </h2>
@@ -176,7 +176,7 @@ const experiences = [
         <RevealItem :delay="80">
             <section>
                 <div class="flex items-center gap-3 mb-10">
-                    <div class="h-px flex-1 max-w-[2rem] bg-gradient-to-r from-violet-500 to-cyan-500"></div>
+                    <div class="h-px flex-1 max-w-[2rem] bg-gradient-to-r from-purple-500 to-violet-500"></div>
                     <span class="section-label">Skills & Tecnologias</span>
                 </div>
                 <div class="grid xs:grid-cols-1 md:grid-cols-2 gap-4">
@@ -210,7 +210,7 @@ const experiences = [
         <section>
             <RevealItem>
                 <div class="flex items-center gap-3 mb-10">
-                    <div class="h-px flex-1 max-w-[2rem] bg-gradient-to-r from-violet-500 to-cyan-500"></div>
+                    <div class="h-px flex-1 max-w-[2rem] bg-gradient-to-r from-purple-500 to-violet-500"></div>
                     <span class="section-label">Experiência Profissional</span>
                 </div>
             </RevealItem>
@@ -222,7 +222,7 @@ const experiences = [
                             <!-- Timeline line -->
                             <div class="xs:hidden md:flex flex-col items-center flex-shrink-0 w-4">
                                 <div class="w-3 h-3 rounded-full mt-5 ring-4 dark:ring-background ring-white flex-shrink-0"
-                                    :class="exp.current ? 'bg-gradient-to-br from-violet-500 to-cyan-500 animate-pulse' : 'dark:bg-white/20 bg-gray-300'"
+                                    :class="exp.current ? 'bg-gradient-to-br from-purple-500 to-violet-500 animate-pulse' : 'dark:bg-white/20 bg-gray-300'"
                                 ></div>
                                 <div v-if="idx < experiences.length - 1" class="flex-1 w-px dark:bg-white/[0.06] bg-gray-200 mt-1"></div>
                             </div>
@@ -237,7 +237,7 @@ const experiences = [
                                                 v-if="exp.href"
                                                 :href="exp.href"
                                                 target="_blank"
-                                                class="text-sm text-muted-foreground hover:text-violet-400 transition-colors"
+                                                class="text-sm text-muted-foreground hover:text-purple-400 transition-colors"
                                             >
                                                 {{ exp.company }}
                                             </a>

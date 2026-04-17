@@ -40,7 +40,7 @@ onMounted(() => {
 
                     <!-- Eyebrow -->
                     <div class="flex items-center gap-3">
-                        <div class="h-px w-8 bg-gradient-to-r from-violet-500 to-cyan-500"></div>
+                        <div class="h-px w-8 bg-gradient-to-r from-purple-500 to-violet-500"></div>
                         <span class="section-label">Full Stack Developer</span>
                     </div>
 
@@ -48,16 +48,16 @@ onMounted(() => {
                     <div>
                         <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-none">
                             Cristian<br />
-                            <span class="bg-gradient-to-r from-violet-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                            <span class="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">
                                 Camargo
                             </span>
                         </h1>
 
                         <!-- Typewriter -->
                         <div class="flex items-center gap-2 mt-4 h-7">
-                            <span class="w-px h-5 bg-violet-500 rounded-full animate-pulse"></span>
+                            <span class="w-px h-5 bg-purple-500 rounded-full animate-pulse"></span>
                             <span class="text-base md:text-lg text-muted-foreground font-medium">
-                                {{ typedText }}<span class="animate-blink-cursor text-violet-400">|</span>
+                                {{ typedText }}<span class="animate-blink-cursor text-purple-400">|</span>
                             </span>
                         </div>
                     </div>
@@ -87,7 +87,7 @@ onMounted(() => {
                     <div class="flex items-center gap-6 pt-2">
                         <template v-for="(stat, i) in stats" :key="stat.label">
                             <div class="text-center">
-                                <p class="text-2xl font-black bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent leading-none">
+                                <p class="text-2xl font-black bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent leading-none">
                                     {{ stat.value }}
                                 </p>
                                 <p class="text-xs text-muted-foreground mt-0.5">{{ stat.label }}</p>

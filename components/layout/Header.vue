@@ -40,16 +40,15 @@ const navLinks = [
         <Container class="flex items-center justify-between h-full">
 
             <NuxtLink to="/" class="flex items-center gap-2.5 group">
-                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center flex-shrink-0 group-hover:shadow-lg group-hover:shadow-violet-500/30 transition-shadow">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-600 to-violet-600 flex items-center justify-center flex-shrink-0 group-hover:shadow-lg group-hover:shadow-purple-500/30 transition-shadow">
                     <span class="text-white font-black text-xs">CC</span>
                 </div>
                 <span class="font-bold text-sm hidden sm:block">
-                    <span class="bg-gradient-to-r from-violet-500 to-cyan-500 bg-clip-text text-transparent">Cristian</span>
+                    <span class="bg-gradient-to-r from-purple-500 to-violet-500 bg-clip-text text-transparent">Cristian</span>
                     <span class="text-foreground"> Camargo</span>
                 </span>
             </NuxtLink>
 
-  
             <div class="hidden md:flex items-center gap-6">
                 <nav class="flex items-center gap-6">
                     <NuxtLink
@@ -60,7 +59,7 @@ const navLinks = [
                         class="relative group text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-1"
                     >
                         {{ link.label }}
-                        <span class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-violet-500 to-cyan-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                        <span class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-purple-500 to-violet-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                     </NuxtLink>
                 </nav>
 
@@ -104,7 +103,6 @@ const navLinks = [
                 </ClientOnly>
             </div>
 
-  
             <div class="flex md:hidden">
                 <button
                     type="button"
