@@ -40,9 +40,8 @@ const navLinks = [
         <Container class="flex items-center justify-between h-full">
 
             <NuxtLink to="/" class="flex items-center gap-2.5 group">
-                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-600 to-violet-600 flex items-center justify-center flex-shrink-0 group-hover:shadow-lg group-hover:shadow-purple-500/30 transition-shadow">
-                    <span class="text-white font-black text-xs">CC</span>
-                </div>
+                <img src="/logo.png" class="w-8 h-8 object-contain block dark:hidden flex-shrink-0" alt="Logo" />
+                <img src="/logo-dark.png" class="w-8 h-8 object-contain hidden dark:block flex-shrink-0" alt="Logo" />
                 <span class="font-bold text-sm hidden sm:block">
                     <span class="bg-gradient-to-r from-purple-500 to-violet-500 bg-clip-text text-transparent">Cristian</span>
                     <span class="text-foreground"> Camargo</span>
