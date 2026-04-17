@@ -8,8 +8,7 @@ const projects = [
         title: 'Modular Pré Moldados',
         description: 'A empresa controlava tudo em planilhas. Desenvolvi um sistema completo para substituir isso — com controle de pedidos, estoque e clientes num só lugar.',
         cover: '/covers/modular.png',
-        tags: ['Nuxt.js', 'Vue.js', 'AdonisJS', 'Tailwind CSS'],
-        status: 'Em desenvolvimento',
+        tags: ['React', 'shadcn/ui', 'NestJS', 'Prisma', 'PostgreSQL'],
         links: [
             { label: 'Web', href: 'https://github.com/cfcamargo/modular-web', type: 'github' },
             { label: 'API', href: 'https://github.com/cfcamargo/modular-api', type: 'github' },
@@ -34,26 +33,6 @@ const projects = [
             { label: 'Web', href: 'https://github.com/cfcamargo/cuiaba-imports', type: 'github' },
             { label: 'API', href: 'https://github.com/cfcamargo/api-cuiabaImports', type: 'github' },
             { label: 'Produção', href: 'https://cuiabaimports.com/', type: 'external' },
-        ],
-    },
-    {
-        title: 'DR Cosméticos',
-        description: 'Loja de cosméticos sem presença na internet. Criei um site leve e fácil de navegar para levar os produtos dela ao mundo digital.',
-        cover: '/covers/dr.png',
-        tags: ['Nuxt.js', 'Vue.js', 'Tailwind CSS'],
-        links: [
-            { label: 'Código', href: 'https://github.com/cfcamargo/dr-cosmetics-new', type: 'github' },
-            { label: 'Produção', href: 'https://drcosmeticospp.com.br', type: 'external' },
-        ],
-    },
-    {
-        title: 'Giselle Hage',
-        description: 'Site portfólio para uma profissional de harmonização facial mostrar seu trabalho e conquistar novos pacientes pela internet.',
-        cover: '/covers/giselle-hage.png',
-        tags: ['Vue.js', 'Nuxt.js', 'Tailwind CSS'],
-        links: [
-            { label: 'Código', href: 'https://github.com/cfcamargo/giselle-hage', type: 'github' },
-            { label: 'Produção', href: 'https://www.dragisellehage.com/', type: 'external' },
         ],
     },
     {

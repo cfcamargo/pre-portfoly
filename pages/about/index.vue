@@ -83,8 +83,8 @@ const experiences = [
         href: 'https://www.kognit.com.br/',
         period: 'Jan 2025 – Atual',
         current: true,
-        description: 'Trabalho no desenvolvimento web com React e no mobile com React Native, sempre em contato direto com o time de design e back-end. Cuido de novas funcionalidades, correções e melhoras de performance — com foco em código que escala e entrega uma boa experiência pro usuário final.',
-        tags: ['React', 'React Native', 'TypeScript', 'Styled Components'],
+        description: 'Atuo principalmente no front-end com React e no mobile com React Native, mas também mergulho no back-end com .NET quando o projeto pede — o que me dá uma visão completa da solução do começo ao fim. Hoje estou à frente de um dos projetos mais desafiadores da minha carreira: um sistema completo para o ramo de seguros, com regras de negócio complexas e alto nível de exigência técnica.',
+        tags: ['React', 'React Native', 'TypeScript', 'Styled Components', '.NET'],
     },
     {
         role: 'Desenvolvedor Front End',
